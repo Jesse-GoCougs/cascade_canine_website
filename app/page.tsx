@@ -36,7 +36,7 @@ export default function Home() {
         </div>
 
         {/* Slideshow — centered, wide, and tall */}
-        <div className="w-full max-w-5xl h-[100vh] rounded-xl overflow-hidden">
+        <div className="w-full max-w-6xl h-[150vh] rounded-xl overflow-hidden">
           <Slideshow />
         </div>
         <div>
