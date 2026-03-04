@@ -36,13 +36,15 @@ export default function Home() {
         </div>
 
         {/* Slideshow — centered, wide, and tall */}
-        <div className="w-full max-w-6xl h-[150vh] rounded-xl overflow-hidden">
+        <div className="w-full max-w-6xl h-[85vh] rounded-xl overflow-hidden">
           <Slideshow />
         </div>
-        <div>
-           <a
+
+        {/* Shop Now — directly below slider */}
+        <div className="mt-8">
+          <a
             href="/products"
-            className="inline-block bg-amber-700 text-white px-8 py-3 rounded-md font-semibold hover:bg-amber-800 transition-colors"
+            className="inline-block bg-amber-700 text-white px-12 py-4 rounded-lg text-lg font-bold tracking-wide uppercase hover:bg-amber-600 transition-colors shadow-lg"
           >
             Shop Now
           </a>
