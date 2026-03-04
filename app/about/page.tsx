@@ -25,7 +25,7 @@ export default function AboutPage() {
 
         {/* Page header */}
         <div className="text-center">
-          <p className="text-amber-300 text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-amber-300 text-lg font-semibold uppercase tracking-widest mb-3">
             Our Story
           </p>
           <h1 className="text-5xl font-bold text-white mb-4">About Cascade Canine Co.</h1>

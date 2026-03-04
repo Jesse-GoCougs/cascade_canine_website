@@ -22,7 +22,7 @@ export default function Home() {
 
         {/* Text — centered at the top */}
         <div className="text-center mb-10">
-          <p className="text-amber-300 text-sm font-semibold uppercase tracking-widest mb-4">
+          <p className="text-amber-300 text-xl font-semibold uppercase tracking-widest mb-4">
             Pacific Northwest Pet Gear
           </p>
           <h1 className="text-5xl font-bold text-white leading-tight mb-6">
