@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 
 const images = [
-
   "/images/productModels/Q20A4528.jpg",
   "/images/productModels/Q20A4441.jpg",
   "/images/productModels/Q20A4604.jpg",
@@ -17,19 +16,40 @@ const images = [
 export default function Slideshow() {
   const [current, setCurrent] = useState(0);
   const touchStartX = useRef(0);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  // Auto-advance to the next image every 4 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
+  // Starts a fresh 5 second timer — clears any existing one first
+  const resetTimer = () => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
     }, 5000);
+  };
 
+  // Start the timer when the component first mounts
+  useEffect(() => {
+    resetTimer();
     // Cleanup: stop the timer when the component is removed from the page
-    return () => clearInterval(timer);
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
   }, []);
 
-  const prev = () => setCurrent((prev) => (prev - 1 + images.length) % images.length);
-  const next = () => setCurrent((prev) => (prev + 1) % images.length);
+  // Each of these resets the timer so the user always gets a full 5s on the new image
+  const prev = () => {
+    setCurrent((prev) => (prev - 1 + images.length) % images.length);
+    resetTimer();
+  };
+
+  const next = () => {
+    setCurrent((prev) => (prev + 1) % images.length);
+    resetTimer();
+  };
+
+  const goTo = (index: number) => {
+    setCurrent(index);
+    resetTimer();
+  };
 
   // Record where the user's finger started
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -62,7 +82,8 @@ export default function Slideshow() {
             src={src}
             alt={`Product model ${index + 1}`}
             fill
-            className="object-cover"
+            className="object-contain"
+            loading="eager"
           />
         </div>
       ))}
@@ -94,7 +115,7 @@ export default function Slideshow() {
         {images.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrent(index)}
+            onClick={() => goTo(index)}
             className={`w-2.5 h-2.5 rounded-full transition-colors ${
               index === current ? "bg-white" : "bg-white/40"
             }`}
