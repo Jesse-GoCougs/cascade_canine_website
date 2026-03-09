@@ -1,7 +1,14 @@
 import Image from "next/image";
+import { stripe } from "@/lib/stripe";
 //import Slideshow from "./components/Slideshow";
 
-export default function Home() {
+export default async function Home() {
+  const products = await stripe.products.list({
+    expand: ["data.default_price"], 
+    limit: 3,
+  });
+
+  console.log(products);
   return (
     <main>
 
