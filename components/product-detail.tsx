@@ -50,7 +50,7 @@ export const ProductDetail = ({ product }: Props) => {
           {/* Contact Button */}
           <Link href="/contact">
             <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4">
-              Contact Us for Inquiry
+              Contact Us
             </Button>
           </Link>
 
