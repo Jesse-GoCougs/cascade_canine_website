@@ -2,8 +2,17 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  images:{
-    domains: ["files.stripe.com"],
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "files.stripe.com",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+      },
+    ],
   }
 };
 

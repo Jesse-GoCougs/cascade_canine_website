@@ -37,7 +37,7 @@ export default function AboutPage() {
           {/* Photo */}
           <div className="relative h-[400px] rounded-xl overflow-hidden">
             <Image
-              src="/images/aboutImages/IMG_1150.JPG"
+              src="https://res.cloudinary.com/ddkhgitza/image/upload/IMG_1150.jpg"
               alt="Cascade Canine Co."
               fill
               className="object-cover"

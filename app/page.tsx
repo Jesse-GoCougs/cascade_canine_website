@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { stripe } from "@/lib/stripe";
-//import Slideshow from "./components/Slideshow";
+import Slideshow from "@/components/SlideShow";
 
 export default async function Home() {
   const products = await stripe.products.list({
@@ -43,9 +43,9 @@ export default async function Home() {
         </div>
 
         {/* Slideshow — centered, wide, and tall */}
-        {/* <div className="w-full max-w-6xl h-[85vh] rounded-xl overflow-hidden">
+        <div className="w-full max-w-6xl h-[85vh] rounded-xl overflow-hidden">
           <Slideshow />
-        </div> */}
+        </div>
 
         {/* Shop Now — directly below slider */}
         <div className="mt-8">
