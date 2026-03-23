@@ -14,7 +14,7 @@ export default function Navbar() {
         {/* Left: Logo + Store Name */}
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/images/logos/storelogo.png"
+            src="https://res.cloudinary.com/ddkhgitza/image/upload/logo.jpg"
             alt="Cascade Canine logo"
             width={40}
             height={40}

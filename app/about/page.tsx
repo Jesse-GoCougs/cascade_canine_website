@@ -12,7 +12,7 @@ export default function AboutPage() {
       {/* Background image */}
       <div className="fixed inset-0 -z-10">
         <Image
-          src="/images/backgrounds/IMG_9631.jpg"
+          src="https://res.cloudinary.com/ddkhgitza/image/upload/IMG_0571.jpg"
           alt="About page background"
           fill
           className="object-cover"

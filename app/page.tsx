@@ -15,7 +15,7 @@ export default async function Home() {
       {/* Background image — fixed to viewport, stays in place while scrolling */}
       <div className="fixed inset-0 -z-10">
         <Image
-          src="/images/backgrounds/IMG_5165.jpg"
+          src="https://res.cloudinary.com/ddkhgitza/image/upload/IMG_5165.jpg"
           alt="Cascade Canine background"
           fill
           className="object-cover"

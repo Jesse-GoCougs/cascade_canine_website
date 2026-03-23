@@ -13,7 +13,7 @@ export default function ContactPage() {
       {/* Background image */}
       <div className="fixed inset-0 -z-10">
         <Image
-          src="/images/backgrounds/IMG_7715.jpg"
+          src="https://res.cloudinary.com/ddkhgitza/image/upload/IMG_9631.jpg"
           alt="Contact page background"
           fill
           className="object-cover"

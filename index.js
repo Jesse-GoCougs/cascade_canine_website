@@ -93,7 +93,7 @@ const createImageTag = (publicId, ...colors) => {
 (async () => {
 
     // Set the folder containing images to upload
-    const folderPath = '/Users/Jesse/Desktop/images/slideShow';
+    const folderPath = '/Users/Jesse/Desktop/images/assests';
 
     const validExtensions = ['.jpg', '.jpeg', '.png', '.webp', '.gif'];
     const files = fs.readdirSync(folderPath).filter(file =>

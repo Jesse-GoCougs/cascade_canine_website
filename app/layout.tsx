@@ -28,13 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        style={{
-          backgroundImage: "url('https://res.cloudinary.com/ddkhgitza/image/upload/v1773995167/IMG_5165.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-        }}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-stone-900`}
       >
         <Navbar />
         <div className="pt-16">
